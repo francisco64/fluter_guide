@@ -87,6 +87,7 @@ The `Scaffold` widget is used to create the basic layout of the app, including t
 
 Several core widgets are used, including `Text`, `Icon`, and `FloatingActionButton`, each demonstrating different aspects of Flutter's widget system.
 
+![Alt text](https://github.com/francisco64/flutter_guide/blob/main/flutter_application_1/reedme_images/Screenshot%202024-07-30%20at%2012.14.06%E2%80%AFPM.png)
 
 ## References
 
