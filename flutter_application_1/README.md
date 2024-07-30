@@ -88,30 +88,6 @@ The `Scaffold` widget is used to create the basic layout of the app, including t
 Several core widgets are used, including `Text`, `Icon`, and `FloatingActionButton`, each demonstrating different aspects of Flutter's widget system.
 
 
-MyApp (StatelessWidget)
-│
-├── MaterialApp (StatelessWidget)
-│   ├── theme: ThemeData
-│   │   ├── useMaterial3: true
-│   │   └── colorSchemeSeed: Colors.blue
-│   └── home: CounterFunctionsScreen (StatefulWidget)
-│       ├── Scaffold (StatelessWidget)
-│       │   ├── appBar: AppBar
-│       │   │   ├── backgroundColor: Color(0x610DB6FF)
-│       │   │   └── title: Text('Counter Functions Screen')
-│       │   │       └── actions: [IconButton, IconButton]
-│       │   ├── body: Center
-│       │   │   └── child: Column
-│       │   │       ├── mainAxisAlignment: MainAxisAlignment.center
-│       │   │       └── children: [Text, Text]
-│       │   └── floatingActionButton: Column
-│       │       ├── mainAxisAlignment: MainAxisAlignment.end
-│       │       └── children: [CustomFloatingButton, SizedBox, CustomFloatingButton, SizedBox, CustomFloatingButton]
-│       └── State: _CounterFunctionsScreenState
-│           └── int clickCounter
-
-
-
 ## References
 
 For more information on the widgets and methods used in this project, refer to the [Flutter documentation](https://flutter.dev/docs).
