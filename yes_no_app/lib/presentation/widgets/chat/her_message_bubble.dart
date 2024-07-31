@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'package:yes_no_app/domain/entities/message.dart';
+
 class HerMessageBubble extends StatelessWidget {
-  const HerMessageBubble({super.key});
+  const HerMessageBubble({super.key, required this.message});
   
+  final Message message;
 
   @override
   Widget build(BuildContext context) {
@@ -26,35 +29,38 @@ class HerMessageBubble extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: Text(
-            'Hola Mundo',
-            style: TextStyle(color: Colors.black),
+            message.text,//'Hola Mundo',
+            style: const TextStyle(color: Colors.black),
           ),
         ),
       ),
       const SizedBox(height: 5,),
 
-      _ImageBubble()
+      _ImageBubble(imageUrl: message.imageUrl!,) //! means i am sure there is imageUrl always
 
     ]);
   }
 }
 
 class _ImageBubble extends StatelessWidget {
-  const _ImageBubble({super.key});
+  const _ImageBubble({required this.imageUrl});
 
+  final String imageUrl;
+
+
+  
   @override
   Widget build(BuildContext context) {
 
     final size = MediaQuery.of(context).size;//device size
 
-
     return ClipRRect(//rounds borders of child
       borderRadius: BorderRadius.circular(30),
       child: Image.network(//returns an image widget, unlike NetworkImage that returns an object
-        'https://yesno.wtf/assets/no/23-5fe6c1ca6c78e7bf9a7cf43e406fb8db.gif',
+        imageUrl,//'https://yesno.wtf/assets/no/23-5fe6c1ca6c78e7bf9a7cf43e406fb8db.gif',
         width: size.width*0.5,//to make it depend on the width of the device
         height: 150,
-        fit: BoxFit.cover,//adjusts pixel ratio
+        fit: BoxFit.cover,//zoom in to fit the dedicated space
         loadingBuilder: (context, child, loadingProgress) {
           
           if (loadingProgress==null) return child;//if loaded return image (child)

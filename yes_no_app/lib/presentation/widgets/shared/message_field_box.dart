@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 class MessageFieldBox extends StatelessWidget {
-  const MessageFieldBox({super.key});
+  
+  final ValueChanged<String> onValue;//object for a function that returns a value
+  
+  const MessageFieldBox({
+    super.key, 
+    required this.onValue
+  });//onValue function has to be passed as parameter
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +29,12 @@ class MessageFieldBox extends StatelessWidget {
       onFieldSubmitted: (value) { 
         print('submitted value $value');//prints value if done button is pressed
         //textController.clear();//clears text written by user
+        //onValue(value);
+        focusNode.unfocus();
         },
       onChanged: (value) {print('submitted value $value');},//prints the whole text if the text changes
       //if user taps outside the form go to the screen,
-      onTapOutside: (event) { focusNode.unfocus(); },//without this taps on the screen dont take to the screen 
+      onTapOutside: (event) { focusNode.unfocus(); },//without this taps on the screen dont focus the screen 
 
       decoration: InputDecoration(//form style
         //border: outlineInputBorder,//all borders
@@ -41,6 +49,7 @@ class MessageFieldBox extends StatelessWidget {
             final textValue = textController.value.text;//gets user input from the controller
             print('button: $textValue'); 
             textController.clear(); 
+            onValue(textValue);
           },
           ),
       ),
