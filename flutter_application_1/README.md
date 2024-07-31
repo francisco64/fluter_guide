@@ -4,6 +4,8 @@
 
 This project is a simple Flutter application that demonstrates fundamental concepts and widgets of Flutter through a counter application. The application allows users to increment and reset a counter. It includes a main screen with buttons to interact with the counter and demonstrates state management in Flutter.
 
+<img src="https://github.com/francisco64/flutter_guide/blob/main/flutter_application_1/reedme_images/simulator_screenshot_ABB2F28B-EC89-4601-9604-9DE138DB29AB.png" alt="drawing" width="200"/>
+
 ## Key Concepts and Widgets
 
 ### main.dart
