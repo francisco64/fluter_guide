@@ -1,5 +1,6 @@
 
 ## Key Concepts and Widgets
+<img src="https://github.com/francisco64/flutter_guide/blob/main/yes_no_app/readme_images/simulator_screenshot_3ADAF09C-2766-41ED-A036-A4F418E26EDA.png" alt="drawing" width="200"/>
 
 ### main.dart
 
@@ -118,6 +119,8 @@ The application uses `ThemeData` to apply a consistent theme across the app. Cus
 ### Widgets
 
 Several core widgets are used, including `Text`, `Container`, and `ListView.builder`, each demonstrating different aspects of Flutter's widget system.
+
+<img src="https://github.com/francisco64/flutter_guide/blob/main/yes_no_app/readme_images/Screenshot%202024-07-31%20at%204.53.04%E2%80%AFPM.png" alt="drawing" width="400"/>
 
 ## References
 
