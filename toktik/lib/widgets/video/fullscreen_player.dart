@@ -68,7 +68,7 @@ class _FullscreenPlayerState extends State<FullscreenPlayer> {
                         
                         VideoPlayer(controller),
 
-                        VideoBackground(),
+                        const VideoBackground(),
                         Positioned(
                           bottom: 50,
                           left:20,
