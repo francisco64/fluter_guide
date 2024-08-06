@@ -12,7 +12,7 @@ class DiscoverScreen extends StatelessWidget {
 
     final discoverProvider = context.watch<DiscoverProvider>();
 
-    final otroProvider = Provider.of<DiscoverProvider>(context);//simillar to above
+    //final otroProvider = Provider.of<DiscoverProvider>(context);//simillar to above
 
 
     return Scaffold(

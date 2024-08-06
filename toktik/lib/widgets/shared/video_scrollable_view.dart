@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:toktik/domain/entities/video_post.dart';
 import 'package:toktik/widgets/shared/video_buttons.dart';
+import 'package:toktik/widgets/video/fullscreen_player.dart';
 
 class VideoScrollableView extends StatelessWidget {
   
@@ -8,8 +9,6 @@ class VideoScrollableView extends StatelessWidget {
   
   
   const VideoScrollableView({super.key, required this.videos});
-
-
 
 
   @override
@@ -25,6 +24,11 @@ class VideoScrollableView extends StatelessWidget {
         return Stack(//puts one widget on top of the other towards user's face
           children: [
             //video player + gradiente
+            SizedBox.expand(//vs expanded?
+              child: FullscreenPlayer(videoUrl: videoPost.videoUrl, caption: videoPost.caption,),
+            ),
+
+            //floating buttons
             Positioned(
               bottom:40,
               right: 20,

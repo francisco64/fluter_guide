@@ -18,7 +18,7 @@ class DiscoverProvider extends ChangeNotifier{
 
   Future<void> loadNextPage() async {//loading next page is adding an element to the videos list which changes the state
     
-    await Future.delayed(const Duration(seconds:2));// simulates http request loading
+    //await Future.delayed(const Duration(seconds:2));// simulates http request loading
 
 
 
