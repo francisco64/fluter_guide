@@ -2,6 +2,7 @@
 
 This project is a Flutter application designed to emulate a TikTok-like video discovery experience. It features a vertically scrollable video feed, user interactions such as liking and sharing, and the ability to view videos in full screen. Below, you will find an in-depth explanation of the project's key components, including the relationships between various widgets and why they are necessary.
 
+https://github.com/francisco64/flutter_guide/blob/6f709f122335103ef6135fd0eddc4a5a13ff2957/toktik/images/simulator_screenshot_B248DE65-AE9A-479B-ABA9-213CC684D681.png
 
 ## Key Concepts and Widget Relationships
 
